@@ -21,4 +21,4 @@ Author is Strukov Andrey Evgenyevich
 * [Telegram](https://www.t.me/struckture28)
 * [Mail](mailto:dufalak.strukov@yandex.ru)
 
-![Unlicense](https://upload.wikimedia.org/wikipedia/commons/e/eb/PD-icon-black.svg)
+The program is distributed by [Unlicense](https://www.unlicense.org).
