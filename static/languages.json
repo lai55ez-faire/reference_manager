@@ -1,0 +1,41 @@
+{
+  "active_language": "English",
+
+  "English":
+  {
+    "main_window":
+    {
+      "window_title": "{}",
+
+      "delete_button": "Delete reference",
+      "add_button": "Add new reference",
+      "open_button": "Open reference",
+      "show_program_info": "Show program info",
+      "update_button": "Update references",
+
+      "header": ["Source title", "Source URL"]
+    },
+    "adding_reference_window":
+    {
+      "window_title": "Add new reference",
+
+      "exit_button": "Exit",
+      "add_reference_button": "Add new reference"
+    },
+    "info_window":
+    {
+      "window_title": "About program...",
+
+      "text": "<html><body><p><b>{}</b>, an easy-to-use open-source program to manage references chosen by you and, if you need, open them. This soft is written using <i>QT and Python</i>.</p><p>Program's version is <u>{}</u> <br> Made by <u>{}</u></p><p>Created to be <b>a Yandex.Lyceum project</b>. But something went wrong, and now it is an indepentend software.<br><i>From Russia with love!</i></p></body></html>",
+      "ok_button": "ОК"
+    },
+    "error_windowses":
+    {
+      "window_title": "An error occured!",
+
+      "file_not_found_error": "File not found.",
+      "permission_error": "Acsess denien.",
+      "no_items_selected": "Please, select some items!"
+    }
+  }
+}

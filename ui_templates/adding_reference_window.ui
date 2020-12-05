@@ -6,32 +6,32 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>260</width>
-    <height>107</height>
+    <width>285</width>
+    <height>115</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Add new source</string>
+   <string>Add new reference</string>
   </property>
   <widget class="QPushButton" name="addButton">
    <property name="geometry">
     <rect>
-     <x>131</x>
-     <y>76</y>
-     <width>128</width>
+     <x>140</x>
+     <y>80</y>
+     <width>141</width>
      <height>30</height>
     </rect>
    </property>
    <property name="text">
-    <string>Add new source</string>
+    <string>Add new reference</string>
    </property>
   </widget>
   <widget class="QPushButton" name="exitButton">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>76</y>
-     <width>128</width>
+     <x>4</x>
+     <y>80</y>
+     <width>131</width>
      <height>30</height>
     </rect>
    </property>
@@ -39,22 +39,22 @@
     <string>Exit</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="sourceName">
+  <widget class="QLineEdit" name="referenceName">
    <property name="geometry">
     <rect>
-     <x>0</x>
+     <x>4</x>
      <y>4</y>
-     <width>258</width>
+     <width>275</width>
      <height>33</height>
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="sourceURL">
+  <widget class="QLineEdit" name="referenceURL">
    <property name="geometry">
     <rect>
-     <x>0</x>
-     <y>40</y>
-     <width>258</width>
+     <x>4</x>
+     <y>42</y>
+     <width>275</width>
      <height>33</height>
     </rect>
    </property>

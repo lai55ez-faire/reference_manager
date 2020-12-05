@@ -9,7 +9,7 @@ from sys import argv, exit
 
 class InfoWindow(QWidget):
     def __init__(self):
-        languages = load(open("../data/static_data/languages.json", mode="r"))
+        languages = load(open("../static/languages.json", mode="r"))
         self.active_language = languages[languages["active_language"]]["info_window"]
 
         super().__init__()
@@ -20,7 +20,7 @@ class InfoWindow(QWidget):
         self.setFixedSize(400, 316)
         self.setStyleSheet(window)
 
-        program_info = load(open("../data/static_data/program_info.json", mode="r"))
+        program_info = load(open("../static/program_info.json", mode="r"))
 
         self.info.setStyleSheet(widget)
         self.info.setText(self.active_language["text"].format(program_info["program_name"], \

@@ -14,7 +14,7 @@ from info_window import InfoWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        languages = load(open("../data/static_data/languages.json", mode="r"))
+        languages = load(open("../static/languages.json", mode="r"))
         self.active_language = languages[languages["active_language"]]["main_window"]
         self.active_language_for_dialogs = languages[languages["active_language"]]["error_windowses"]
 
@@ -35,7 +35,7 @@ class MainWindow(QMainWindow):
     def initUI(self):
         """Инициализация окна."""
         uic.loadUi("../ui_templates/main_window.ui", self)
-        program_info = load(open("../data/static_data/program_info.json"))
+        program_info = load(open("../static/program_info.json"))
 
         self.setFixedSize(500, 380)
         self.setStyleSheet(window)

@@ -9,7 +9,7 @@ from sys import argv, exit
 
 class AddReference(QWidget):
     def __init__(self):
-        languages = load(open("../data/static_data/languages.json", mode="r"))
+        languages = load(open("../static/languages.json", mode="r"))
         self.active_language = languages[languages["active_language"]]["adding_reference_window"]
 
         super().__init__()

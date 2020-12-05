@@ -1,7 +1,7 @@
 from PyQt5.QtWidgets import QMessageBox
 from json import load
 
-data = load(open("../data/themes.json", mode="r"))
+data = load(open("../static/themes.json", mode="r"))
 active_theme = data["active-theme"]
 
 window = (f"background-color: rgb({data[active_theme]['background-color']});")

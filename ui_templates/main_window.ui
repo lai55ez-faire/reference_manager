@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>347</height>
+    <height>411</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,184 +16,17 @@
   <property name="styleSheet">
    <string notr="true"/>
   </property>
-  <widget class="QTreeWidget" name="referencesList">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>4</x>
-     <y>4</y>
-     <width>491</width>
-     <height>300</height>
-    </rect>
-   </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="minimumSize">
-    <size>
-     <width>256</width>
-     <height>300</height>
-    </size>
-   </property>
-   <property name="baseSize">
-    <size>
-     <width>0</width>
-     <height>0</height>
-    </size>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
-   <property name="locale">
-    <locale language="English" country="UnitedStates"/>
-   </property>
-   <property name="frameShape">
-    <enum>QFrame::NoFrame</enum>
-   </property>
-   <property name="frameShadow">
-    <enum>QFrame::Sunken</enum>
-   </property>
-   <property name="lineWidth">
-    <number>0</number>
-   </property>
-   <property name="horizontalScrollBarPolicy">
-    <enum>Qt::ScrollBarAlwaysOff</enum>
-   </property>
-   <property name="editTriggers">
-    <set>QAbstractItemView::NoEditTriggers</set>
-   </property>
-   <property name="tabKeyNavigation">
-    <bool>false</bool>
-   </property>
-   <property name="showDropIndicator" stdset="0">
-    <bool>false</bool>
-   </property>
-   <property name="dragEnabled">
-    <bool>false</bool>
-   </property>
-   <property name="dragDropOverwriteMode">
-    <bool>false</bool>
-   </property>
-   <property name="textElideMode">
-    <enum>Qt::ElideRight</enum>
-   </property>
-   <property name="horizontalScrollMode">
-    <enum>QAbstractItemView::ScrollPerPixel</enum>
-   </property>
-   <property name="indentation">
-    <number>5</number>
-   </property>
-   <property name="rootIsDecorated">
-    <bool>true</bool>
-   </property>
-   <property name="uniformRowHeights">
-    <bool>true</bool>
-   </property>
-   <property name="itemsExpandable">
-    <bool>false</bool>
-   </property>
-   <property name="sortingEnabled">
-    <bool>true</bool>
-   </property>
-   <property name="expandsOnDoubleClick">
-    <bool>false</bool>
-   </property>
-   <property name="columnCount">
-    <number>2</number>
-   </property>
-   <attribute name="headerVisible">
-    <bool>true</bool>
-   </attribute>
-   <attribute name="headerCascadingSectionResizes">
-    <bool>false</bool>
-   </attribute>
-   <attribute name="headerMinimumSectionSize">
-    <number>65</number>
-   </attribute>
-   <attribute name="headerDefaultSectionSize">
-    <number>110</number>
-   </attribute>
-   <attribute name="headerHighlightSections">
-    <bool>false</bool>
-   </attribute>
-   <attribute name="headerShowSortIndicator" stdset="0">
-    <bool>true</bool>
-   </attribute>
-   <attribute name="headerStretchLastSection">
-    <bool>true</bool>
-   </attribute>
-   <column>
-    <property name="text">
-     <string>Source Title</string>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="textAlignment">
-     <set>AlignTrailing|AlignVCenter</set>
-    </property>
-    <property name="background">
-     <color>
-      <red>22</red>
-      <green>22</green>
-      <blue>30</blue>
-     </color>
-    </property>
-    <property name="foreground">
-     <brush brushstyle="SolidPattern">
-      <color alpha="255">
-       <red>242</red>
-       <green>242</green>
-       <blue>242</blue>
-      </color>
-     </brush>
-    </property>
-   </column>
-   <column>
-    <property name="text">
-     <string>Source URL</string>
-    </property>
-    <property name="font">
-     <font>
-      <pointsize>9</pointsize>
-     </font>
-    </property>
-    <property name="background">
-     <color>
-      <red>22</red>
-      <green>22</green>
-      <blue>30</blue>
-     </color>
-    </property>
-    <property name="foreground">
-     <brush brushstyle="SolidPattern">
-      <color alpha="255">
-       <red>242</red>
-       <green>242</green>
-       <blue>242</blue>
-      </color>
-     </brush>
-    </property>
-   </column>
-  </widget>
   <widget class="QPushButton" name="deleteButton">
    <property name="geometry">
     <rect>
      <x>4</x>
      <y>310</y>
-     <width>161</width>
+     <width>245</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(225, 225, 225); сolor: rgb(25, 25, 25);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Delete reference(-s)</string>
@@ -202,14 +35,14 @@
   <widget class="QPushButton" name="addButton">
    <property name="geometry">
     <rect>
-     <x>170</x>
+     <x>252</x>
      <y>310</y>
-     <width>161</width>
+     <width>245</width>
      <height>31</height>
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">background-color: rgb(225, 225, 225); сolor: rgb(25, 25, 25);</string>
+    <string notr="true"/>
    </property>
    <property name="text">
     <string>Add new reference</string>
@@ -218,17 +51,50 @@
   <widget class="QPushButton" name="openButton">
    <property name="geometry">
     <rect>
-     <x>336</x>
-     <y>310</y>
-     <width>161</width>
+     <x>4</x>
+     <y>345</y>
+     <width>245</width>
      <height>31</height>
     </rect>
    </property>
-   <property name="styleSheet">
-    <string notr="true">background-color: rgb(225, 225, 225); сolor: rgb(25, 25, 25);</string>
-   </property>
    <property name="text">
     <string>Open reference(-s)</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="showInfoButton">
+   <property name="geometry">
+    <rect>
+     <x>252</x>
+     <y>345</y>
+     <width>245</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Show program info</string>
+   </property>
+  </widget>
+  <widget class="QListWidget" name="referencesList">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>4</y>
+     <width>491</width>
+     <height>301</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="updateButton">
+   <property name="geometry">
+    <rect>
+     <x>4</x>
+     <y>380</y>
+     <width>494</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Update list</string>
    </property>
   </widget>
  </widget>

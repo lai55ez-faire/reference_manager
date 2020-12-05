@@ -1,0 +1,15 @@
+{
+	"active-theme": "default",
+
+	"default":
+	{
+		"background-color": "60, 60, 60",
+		"widget-border": "1px black",
+		"border-radius": "7px",
+
+		"button-text-color": "225, 225, 225",
+		"button-background-color": "22, 22, 30",
+
+		"widget-background": "242, 242, 242"
+	}
+}
