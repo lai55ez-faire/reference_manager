@@ -12,4 +12,4 @@ Author is Strukov Andrey Evgenyevich
 * Discord: Struckture28#7129
 * [VKontakte](https://www.vk.com/struckture28)
 * [Telegram](https://www.t.me/struckture28)
-* [Mail](dufalak.strukov@yandex.ru)
+* [Mail](mailto:dufalak.strukov@yandex.ru)
