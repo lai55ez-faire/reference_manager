@@ -2,9 +2,9 @@
 A simple program to watch content from sources chosen by you.
 
 ## Changelog
-Latest version is 0.81
-* Little bugs are fixed
-* Static files are uploaded
+Latest version is 0.85
+* Settings are moved to new file
+* Added button to refresh references list
 
 ## Plans
 I want to do these things in future.
