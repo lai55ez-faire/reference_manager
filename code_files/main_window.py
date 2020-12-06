@@ -15,8 +15,10 @@ from info_window import InfoWindow
 class MainWindow(QMainWindow):
     def __init__(self):
         languages = load(open("../static/languages.json", mode="r"))
-        self.active_language = languages[languages["active_language"]]["main_window"]
-        self.active_language_for_dialogs = languages[languages["active_language"]]["error_windowses"]
+        settings_file = load(open("../data/settings.json", mode="r"))
+
+        self.active_language = languages[settings_file["active_language"]]["main_window"]
+        self.active_language_for_dialogs = languages[settings_file["active_language"]]["error_windowses"]
 
         try:
             self.references_list = load(open("../data/references.json", mode="r"))
@@ -27,17 +29,16 @@ class MainWindow(QMainWindow):
                                                ["window_title"], self.active_language_for_dialogs\
                                                ["permission_error"], QMessageBox.Yes)
 
+        print("Program is launched!")
         super().__init__()
         self.initUI()
-
-        print("Program launched!\n")
 
     def initUI(self):
         """Инициализация окна."""
         uic.loadUi("../ui_templates/main_window.ui", self)
         program_info = load(open("../static/program_info.json"))
 
-        self.setFixedSize(500, 380)
+        self.setFixedSize(500, 415)
         self.setStyleSheet(window)
         self.setWindowTitle(self.active_language["window_title"].format(program_info["program_name"]))
 
@@ -71,6 +72,8 @@ class MainWindow(QMainWindow):
         for reference_title in sorted(self.references_list.keys()):
             self.referencesList.addItem(f"{reference_title} ({self.references_list[reference_title]})")
 
+        print("References list is updated.")
+
     def delete_method(self):
         """Удаляет выбранные пользователем ссылки."""
 
@@ -86,9 +89,7 @@ class MainWindow(QMainWindow):
         self.window = AddReference()
         self.window.show()
 
-        self.window.closeEvent(self.update_references())
-
-        print("A new reference added!")
+        # self.window.closeEvent(self.update_references())
 
     def open_method(self):
         """Открывает выбранные ссылки в браузере по умолчанию."""

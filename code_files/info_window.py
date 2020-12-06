@@ -10,7 +10,9 @@ from sys import argv, exit
 class InfoWindow(QWidget):
     def __init__(self):
         languages = load(open("../static/languages.json", mode="r"))
-        self.active_language = languages[languages["active_language"]]["info_window"]
+        settings_file = load(open("../data/settings.json", mode="r"))
+
+        self.active_language = languages[settings_file["active_language"]]["info_window"]
 
         super().__init__()
         self.init_UI()

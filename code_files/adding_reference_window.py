@@ -10,7 +10,9 @@ from sys import argv, exit
 class AddReference(QWidget):
     def __init__(self):
         languages = load(open("../static/languages.json", mode="r"))
-        self.active_language = languages[languages["active_language"]]["adding_reference_window"]
+        settings_file = load(open("../data/settings.json", mode="r"))
+
+        self.active_language = languages[settings_file["active_language"]]["adding_reference_window"]
 
         super().__init__()
         self.init_UI()
@@ -49,7 +51,7 @@ class AddReference(QWidget):
         open("../data/references.json", "w").write(dumps(self.references_list, sort_keys=True,
                                                          indent=2, separators=(",", ": ")))
 
-        print("A new reference added!")
+        print(f"\"{self.referenceName.text()}\" reference added!")
 
         self.close()
 
