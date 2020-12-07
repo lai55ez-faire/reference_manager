@@ -28,9 +28,12 @@ class InfoWindow(QWidget):
         self.info.setText(self.active_language["text"].format(program_info["program_name"], \
         program_info["version"], program_info["author"]))
 
-        self.okButton.setStyleSheet(button)
-        self.okButton.setText(self.active_language["ok_button"])
-        self.okButton.clicked.connect(self.ok_button)
+        self.initilise_button(self.okButton, "ok_button", self.ok_button)
+
+    def initilise_button(self, object, key_in_language_file, function):
+        object.setStyleSheet(button)
+        object.setText(self.active_language[key_in_language_file])
+        object.clicked.connect(function)
 
     def ok_button(self):
         self.close()

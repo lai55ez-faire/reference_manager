@@ -1,6 +1,4 @@
 {
-  "active_language": "English",
-
   "English":
   {
     "main_window":
@@ -11,9 +9,7 @@
       "add_button": "Add new reference",
       "open_button": "Open reference",
       "show_program_info": "Show program info",
-      "update_button": "Update references",
-
-      "header": ["Source title", "Source URL"]
+      "update_button": "Update references"
     },
     "adding_reference_window":
     {
@@ -36,6 +32,40 @@
       "file_not_found_error": "File not found.",
       "permission_error": "Acsess denien.",
       "no_items_selected": "Please, select some items!"
+    }
+  },
+  "Русский":
+  {
+    "main_window":
+    {
+      "window_title": "{}",
+
+      "delete_button": "Удалить ссылку",
+      "add_button": "Добавить новую ссылку",
+      "open_button": "Открыть ссылку",
+      "show_program_info": "О программе...",
+      "update_button": "Обновить ссылки"
+    },
+    "adding_reference_window":
+    {
+      "window_title": "Новая ссылка",
+
+      "exit_button": "Отмена",
+      "add_reference_button": "Добавить"
+    },
+    "info_window":
+    {
+      "window_title": "О программе...",
+
+      "text": "<html><body><p><b>{}</b>, простая в использовнии программа для сохранения ссылок в соответствующем списке для последующего их открытия. Это есть свободная программа, написканная на<i>QT и Python</i>.</p><p>Версия программы: <u>{}</u> <br> Автор: <u>{}</u></p><p> Создано, чтобы быть <b>проектом для Яндекс.Лицея</b>. Но что-то пошло не так и теперь это свободное ПО.<br><i>Из России с любовью!</i></p></body></html>",
+      "ok_button": "ОК"
+    },
+    "error_windowses":
+    {
+      "window_title": "Произошла ошибка.",
+
+      "file_not_found_error": "Файл не найден.",
+      "permission_error": "Доступ запрещён."
     }
   }
 }

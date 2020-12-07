@@ -1,6 +1,4 @@
 {
-	"active-theme": "default",
-
 	"default":
 	{
 		"background-color": "60, 60, 60",
@@ -11,5 +9,16 @@
 		"button-background-color": "22, 22, 30",
 
 		"widget-background": "242, 242, 242"
+	},
+	"light":
+	{
+		"background-color": "150, 150, 150",
+		"widget-border": "1px black",
+		"border-radius": "7px",
+
+		"button-text-color": "22, 22, 30",
+		"button-background-color": "255, 255, 255",
+
+		"widget-background": "255, 255, 255"
 	}
 }

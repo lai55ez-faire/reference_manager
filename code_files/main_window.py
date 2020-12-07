@@ -34,7 +34,6 @@ class MainWindow(QMainWindow):
         self.initUI()
 
     def initUI(self):
-        """Инициализация окна."""
         uic.loadUi("../ui_templates/main_window.ui", self)
         program_info = load(open("../static/program_info.json"))
 
@@ -45,38 +44,28 @@ class MainWindow(QMainWindow):
         self.referencesList.setStyleSheet(widget)
         self.update_references()
 
-        self.deleteButton.setStyleSheet(button)
-        self.deleteButton.setText(self.active_language["delete_button"])
-        self.deleteButton.clicked.connect(self.delete_method)
+        self.initilise_button(self.deleteButton, "delete_button", self.delete_method)
+        self.initilise_button(self.addButton, "add_button", self.add_method)
+        self.initilise_button(self.openButton, "open_button", self.open_method)
+        self.initilise_button(self.showInfoButton, "show_program_info", self.show_program_info)
+        self.initilise_button(self.updateButton, "update_button", self.update_references)
 
-        self.addButton.setStyleSheet(button)
-        self.addButton.setText(self.active_language["add_button"])
-        self.addButton.clicked.connect(self.add_method)
 
-        self.openButton.setStyleSheet(button)
-        self.openButton.setText(self.active_language["open_button"])
-        self.openButton.clicked.connect(self.open_method)
-
-        self.showInfoButton.setStyleSheet(button)
-        self.showInfoButton.setText(self.active_language["show_program_info"])
-        self.showInfoButton.clicked.connect(self.show_program_info)
-
-        self.updateButton.setStyleSheet(button)
-        self.updateButton.setText(self.active_language["update_button"])
-        self.updateButton.clicked.connect(self.update_references)
-
+    def initilise_button(self, object, key_in_language_file, function):
+        object.setStyleSheet(button)
+        object.setText(self.active_language[key_in_language_file])
+        object.clicked.connect(function)
 
     def update_references(self):
         self.references_list = load(open("../data/references.json", mode="r"))
         self.referencesList.clear()
+
         for reference_title in sorted(self.references_list.keys()):
             self.referencesList.addItem(f"{reference_title} ({self.references_list[reference_title]})")
 
         print("References list is updated.")
 
     def delete_method(self):
-        """Удаляет выбранные пользователем ссылки."""
-
         del self.references_list[sorted(self.references_list.keys())[self.referencesList.currentRow()]]
 
         open("../data/references.json", "w").write(dumps(self.references_list, sort_keys=True,
@@ -85,14 +74,12 @@ class MainWindow(QMainWindow):
         self.update_references()
 
     def add_method(self):
-        """Открывает окно для добавления ссылки."""
         self.window = AddReference()
         self.window.show()
 
         # self.window.closeEvent(self.update_references())
 
     def open_method(self):
-        """Открывает выбранные ссылки в браузере по умолчанию."""
         open_new_tab(self.references_list[sorted(self.references_list.keys())[self.referencesList.currentRow()]])
 
         print(f"\"{sorted(self.references_list.keys())[self.referencesList.currentRow()]}\" is opened!")

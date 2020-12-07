@@ -36,13 +36,13 @@ class AddReference(QWidget):
         self.referenceName.setStyleSheet(widget)
         self.referenceURL.setStyleSheet(widget)
 
-        self.addButton.setStyleSheet(button)
-        self.addButton.setText(self.active_language["add_reference_button"])
-        self.addButton.clicked.connect(self.add_button)
+        self.initilise_button(self.addButton, "add_reference_button", self.add_button)
+        self.initilise_button(self.exitButton, "exit_button", self.exit_button)
 
-        self.exitButton.setStyleSheet(button)
-        self.exitButton.setText(self.active_language["exit_button"])
-        self.exitButton.clicked.connect(self.exit_button)
+    def initilise_button(self, object, key_in_language_file, function):
+        object.setStyleSheet(button)
+        object.setText(self.active_language[key_in_language_file])
+        object.clicked.connect(function)
 
     def add_button(self):
         new_reference = (self.referenceName.text(), self.referenceURL.text())
