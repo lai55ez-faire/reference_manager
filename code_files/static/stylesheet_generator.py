@@ -1,8 +1,8 @@
 from PyQt5.QtWidgets import QMessageBox
 from json import load
 
-data = load(open("../static/themes.json", mode="r"))
-settings_file = load(open("../data/settings.json", mode="r"))
+data = load(open("../static/themes.json", mode="r", encoding="utf-8"))
+settings_file = load(open("../data/settings.json", mode="r", encoding="utf-8"))
 
 active_theme = settings_file["active_theme"]
 

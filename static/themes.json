@@ -20,5 +20,16 @@
 		"button-background-color": "255, 255, 255",
 
 		"widget-background": "255, 255, 255"
+	},
+	"blue_monday":
+	{
+		"background-color": "18, 10, 143",
+		"widget-border": "1px black",
+		"border-radius": "7px",
+
+		"button-text-color": "225, 225, 225",
+		"button-background-color": "0, 0, 0",
+
+		"widget-background": "225, 225, 225"
 	}
 }

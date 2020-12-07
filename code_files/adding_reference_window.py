@@ -9,8 +9,8 @@ from sys import argv, exit
 
 class AddReference(QWidget):
     def __init__(self):
-        languages = load(open("../static/languages.json", mode="r"))
-        settings_file = load(open("../data/settings.json", mode="r"))
+        languages = load(open("../static/languages.json", mode="r", encoding="utf-8"))
+        settings_file = load(open("../data/settings.json", mode="r", encoding="utf-8"))
 
         self.active_language = languages[settings_file["active_language"]]["adding_reference_window"]
 
@@ -18,7 +18,7 @@ class AddReference(QWidget):
         self.init_UI()
 
         try:
-            self.references_list = load(open("../data/references.json", mode="r"))
+            self.references_list = load(open("../data/references.json", mode="r", encoding="utf-8"))
         except FileNotFoundError:
             message_box = QMessageBox.question(self, self.active_language_for_dialogs\
                                                ["window_title"], self.active_language_for_dialogs\
@@ -48,8 +48,9 @@ class AddReference(QWidget):
         new_reference = (self.referenceName.text(), self.referenceURL.text())
         self.references_list[new_reference[0]] = new_reference[1]
 
-        open("../data/references.json", "w").write(dumps(self.references_list, sort_keys=True,
-                                                         indent=2, separators=(",", ": ")))
+        open("../data/references.json", "w", encoding="utf-8").write \
+            (dumps(self.references_list, sort_keys=True,
+                   indent=2, separators=(",", ": ")))
 
         print(f"\"{self.referenceName.text()}\" reference added!")
 

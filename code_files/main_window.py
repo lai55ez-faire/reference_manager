@@ -14,16 +14,16 @@ from info_window import InfoWindow
 
 class MainWindow(QMainWindow):
     def __init__(self):
-        languages = load(open("../static/languages.json", mode="r"))
-        settings_file = load(open("../data/settings.json", mode="r"))
+        languages = load(open("../static/languages.json", mode="r", encoding="utf-8"))
+        settings_file = load(open("../data/settings.json", mode="r", encoding="utf-8"))
 
         self.active_language = languages[settings_file["active_language"]]["main_window"]
         self.active_language_for_dialogs = languages[settings_file["active_language"]]["error_windowses"]
 
         try:
-            self.references_list = load(open("../data/references.json", mode="r"))
+            self.references_list = load(open("../data/references.json", mode="r", encoding="utf-8"))
         except FileNotFoundError:
-            self.references_list = load(open("../data/references.json", mode="w"))
+            self.references_list = load(open("../data/references.json", mode="w", encoding="utf-8"))
         except PermissionError:
             message_box = QMessageBox.question(self, self.active_language_for_dialogs\
                                                ["window_title"], self.active_language_for_dialogs\
@@ -57,7 +57,7 @@ class MainWindow(QMainWindow):
         object.clicked.connect(function)
 
     def update_references(self):
-        self.references_list = load(open("../data/references.json", mode="r"))
+        self.references_list = load(open("../data/references.json", mode="r", encoding="utf-8"))
         self.referencesList.clear()
 
         for reference_title in sorted(self.references_list.keys()):
@@ -68,8 +68,9 @@ class MainWindow(QMainWindow):
     def delete_method(self):
         del self.references_list[sorted(self.references_list.keys())[self.referencesList.currentRow()]]
 
-        open("../data/references.json", "w").write(dumps(self.references_list, sort_keys=True,
-                                                             indent=2, separators=(",", ": ")))
+        open("../data/references.json", "w", encoding="utf-8").\
+            write(dumps(self.references_list, sort_keys=True,
+                        indent=2, separators=(",", ": ")))
 
         self.update_references()
 
@@ -77,7 +78,7 @@ class MainWindow(QMainWindow):
         self.window = AddReference()
         self.window.show()
 
-        # self.window.closeEvent(self.update_references())
+
 
     def open_method(self):
         open_new_tab(self.references_list[sorted(self.references_list.keys())[self.referencesList.currentRow()]])
@@ -87,7 +88,6 @@ class MainWindow(QMainWindow):
     def show_program_info(self):
         self.window = InfoWindow()
         self.window.show()
-
 
 
 if __name__ == '__main__':

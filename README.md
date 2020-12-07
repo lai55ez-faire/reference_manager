@@ -3,10 +3,9 @@ A simple program to watch content from sources chosen by you.
 Avaliable in [official repository](https://www.github.com/Struckture28/reference_manager)
 
 ## Changelog
-Latest version is 0.9
-* Little bugs are fixed and code is more compact now
-* Translated into Russian language
-* Light theme added
+Latest version is 0.91
+* Bug with charset is fixed
+* "Blue monday" theme is added
 
 ## Plans
 I want to do these things in future.
