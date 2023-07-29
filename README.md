@@ -13,12 +13,4 @@ I want to do these things in future.
 * Fix bug with button, which adds reference
 
 ## Author
-Author is Strukov Andrey Evgenyevich (Struckture28)
-
-* Discord: Struckture28#7129
-* [VKontakte](https://www.vk.com/struckture28)
-* [Telegram](https://www.t.me/struckture28)
-* [Mail](mailto:dufalak.strukov@yandex.ru)
-* [GitHub](https://www.github.com/Struckture28)
-
-The program is distributed by [Unlicense](https://www.unlicense.org).
+Author is Strukov Andrey Evgenyevich, an indie developer from Russia.
